@@ -1,0 +1,449 @@
+@font-face {
+    font-family: 'Geist';
+    src: url('./assets/webfonts/Geist-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Geist';
+    src: url('./assets/webfonts/Geist-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Geist';
+    src: url('./assets/webfonts/Geist-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Geist';
+    src: url('./assets/webfonts/Geist-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Geist';
+    src: url('./assets/webfonts/Geist-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Geist';
+    src: url('./assets/webfonts/Geist-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Geist';
+    src: url('./assets/webfonts/Geist-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Geist';
+    src: url('./assets/webfonts/Geist-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Geist';
+    src: url('./assets/webfonts/Geist-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Geist';
+    src: url('./fonts/Geist[wght].woff2') format('woff2-variations');
+    font-weight: 100 900; /* Allows full range */
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* 3. Root and Base Styles */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Geist', sans-serif;
+    font-size: 16px;
+    color: #1a1a1a;
+    background-color: rgb(247,247,247);
+    line-height: 1.6;
+  }
+  
+  /* 4. Global Helpers */
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* for Safari */
+    background-color: rgb(247,247,247); /* light glass look */
+  }
+  
+  
+  .container {
+    min-width: 1200px;
+    padding: 0 1.5rem;
+  } 
+
+  .gradient-bar {
+    height: 5px;
+    width: 100%;
+    background: linear-gradient(to right, #00cfff, #3c40f0, #bc33e2, #ff5ca7);
+  }
+
+  
+  /* 5. Navigation */
+   .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    font-size: 0.875rem;
+    color: #212121;
+    background: transparent;
+  } 
+  
+  .nav_addresses--unordered_lists {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav_addresses--unordered_lists a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-weight: 500;
+    color: #212121;
+    font-size: 0.875rem;
+  }
+
+  
+  .nav_buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .sign_in,
+  .sign_up {
+    font-family: 'Geist', sans-serif;
+    font-weight: 450;
+    font-size: 0.875rem;
+    border: none;
+    cursor: pointer;
+    padding: 9px 15px;
+    border-radius: 10px;
+  }
+  
+  .sign_in {
+    background-color: white;
+    color: #1a1a1a;
+    border: 1px solid #d0d0d0;
+    padding: 9px 15px;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .sign_up {
+    background: linear-gradient(to right, #1c1c1c, #000);
+    color: white;
+    padding: 9px 15px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .sign_up::after {
+    content: '›'; /* Right arrow */
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  
+  main{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  
+  /* 6. Hero Section */
+  #hero {
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .hero_content {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .hero_content--one .content_one {
+    color: rgb(115, 115, 115);
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+  
+  .hero_content--two .content_two {
+    font-size: 4.5rem; /* 72px */
+    font-weight: 450;
+    line-height: 4.75rem;
+    color: rgb(61, 61, 61);
+  }
+  
+  .hero_content--three .content_three {
+    font-size: 1.25rem;
+    color: rgb(163, 163, 163);
+    font-weight: 400;
+    text-align: center;
+  }
+  
+  /* .trial_button {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 450;
+    cursor: pointer;
+    text-align: center;
+  } */
+
+  .glow-button-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .trial_button {
+    position: relative;
+    z-index: 2;
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 0.7rem 1rem;
+    border: none;
+    border-radius: 10px;
+    border-width: 0px;
+    font-size: 1rem;
+    font-weight: 450;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  /* The moving horizontal glow strip under the button */
+  .glow-button-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 16px;
+    background: linear-gradient(90deg,
+      #00cfff,
+      #3c40f0,
+      #bc33e2,
+      #ff5ca7,
+      #00cfff);
+    background-size: 300% 100%;
+    animation: slideGlow 4s linear infinite;
+    filter: blur(14px);
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  @keyframes slideGlow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  
+  .hero_content--five p{
+    color: rgb(163, 163, 163);
+    font-size: 0.75rem;
+    font-weight: 400;
+    text-align: center;
+  }
+  
+  .hero_content--five u {
+    color: #000;
+    cursor: pointer;
+  }
+  
+  .hero_content--six {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logocontent_one,
+  .logocontent_two {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    padding: 0.4rem .7rem;
+    border-radius: 12px;
+    border-width: 1px;
+    border: 1px solid rgb(233, 230, 230);
+    font-size: 0.875rem;
+    color: #000000;
+    font-weight: 400;
+  }
+
+  #demo_screenshot {
+    display: flex;
+    justify-content: center;
+    /* margin-top: 3rem; */
+    /* padding: 0 1rem; */
+  }
+  
+  .hero_img {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+    max-width: 1100px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.001);
+  }
+  
+  #features_intro {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 1rem;
+    overflow: hidden;
+    margin-top: 30px;
+  }
+  
+  .bg-text {
+    position: absolute;
+    /* top: 50%; */
+    transform: translateY(-47%);
+    font-size: 3.5rem;
+    font-weight: 450;
+    text-align: center;
+    line-height: 60px;
+    color: #000000;
+    /* opacity: 0.08; */
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+  
+  .bg-text .feature_span {
+    font-weight: 450;
+    color: rgb(163, 163, 163);
+  } 
+  
+  .card-preview {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    margin: 50px;
+  }
+  
+  .feature_text {
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    color: #666;
+    line-height: 44px;
+  }
+  
+  .feature_text strong {
+    color: #141414;
+    font-weight: 400;
+    font-size: 2rem;
+  }
+  
+  .inline-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0.25rem;
+    vertical-align: middle;
+  }
+  
+  .inline-icon img {
+    height: 1.6rem;
+    border-radius: 50px;
+    object-fit: contain;
+    
+  }
+  #transactions{
+    display: inline-flex;
+  }
+  
+  .transactions-logo{
+    margin: 0 auto;
+    width: 75%;
+    border-radius: 20px;
+  }
+  .transaction_text-one{
+    font-size: 1rem;
+    font-weight: 450;
+    color: #141414;
+  }
+  .transactions_container{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  .transaction_overall-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 40px;
+  }
